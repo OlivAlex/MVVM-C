@@ -6,16 +6,13 @@
 
 import Foundation
 
-struct UserSearchPayload {
-    let users: [UserModel]
-    let query: String
-}
-
 protocol UsersViewModelType {
     var shouldShowActivityIndicator: Bool { get }
     var shouldShowUsersSearchView: Bool { get }
     var usersCountInfo: String { get }
     var userFound: String { get }
+	
+	func controllerRequestedUpdate()
 }
 
 final class UsersViewModel : UsersViewModelType {
@@ -28,6 +25,16 @@ final class UsersViewModel : UsersViewModelType {
 	let dataProvider: UsersDataProviderType!
 	init(dataProvider: UsersDataProviderType) {
 		self.dataProvider = dataProvider
-		
+		controllerRequestedUpdate()
+	}
+	
+	func controllerRequestedUpdate() {
+		dataProvider.fetchUsers(from: "http://jsonplaceholder.typicode.com/users") { fetchUsersData in
+			guard case .success(let usersData) = fetchUsersData else {
+				return
+			}
+			
+			
+		}
 	}
 }

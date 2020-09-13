@@ -30,6 +30,7 @@ final class UsersViewController: BaseViewController<UsersViewModelType> {
 	}
 
 	@objc func stopEditing() {
+		viewModel.controllerRequestedUpdate()
 		self.view.endEditing(true)
 	}
 }

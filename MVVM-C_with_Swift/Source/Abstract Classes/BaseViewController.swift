@@ -10,6 +10,10 @@ protocol ControllerDelegate {
 	func viewDidLoad()
 }
 
+protocol ModelListener {
+	func modelChanged()
+}
+
 class BaseViewController<T>: UIViewController {
 
 	private(set) var viewModel: T
@@ -32,4 +36,10 @@ class BaseViewController<T>: UIViewController {
 	}
 	
     func configure() {}
+}
+
+extension BaseViewController : ModelListener {
+	func modelChanged() {
+		configure()
+	}
 }
