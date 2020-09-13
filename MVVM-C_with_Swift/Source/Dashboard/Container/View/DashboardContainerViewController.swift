@@ -11,8 +11,6 @@ final class DashboardContainerViewController: BaseViewController<DashboardContai
     @IBOutlet private(set) weak var usersContainerView: UIView!
 	
     override func configure() {
-	
-		// We need to do something with the view model 🤔.
-		// Like set our UI maybe...
+		title = viewModel.title
     }
 }

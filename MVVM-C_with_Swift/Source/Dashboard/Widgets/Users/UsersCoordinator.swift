@@ -19,7 +19,14 @@ final class UsersCoordinator: Coordinator {
 
         let dataProvider = DataProvider()
         let viewModel = UsersViewModel(dataProvider: dataProvider)
-        let usersViewController = UsersViewController(viewModel: viewModel)
+		let usersViewController = UsersViewController(viewModel: viewModel, delegate: self)
         containerViewController.addChildController(usersViewController)
     }
+}
+
+extension UsersCoordinator : ControllerDelegate {
+	
+	func viewDidLoad() {
+		print("View Loaded")
+	}
 }

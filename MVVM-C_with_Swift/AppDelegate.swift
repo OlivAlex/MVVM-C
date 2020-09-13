@@ -9,7 +9,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
     private let navigationController: UINavigationController = {
         let navigationController = UINavigationController()
         navigationController.navigationBar.isTranslucent = false
@@ -22,11 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.rootViewController = navigationController
         let coordinator = DashboardContainerCoordinator(navigationController: navigationController)
+		mainCoordinator = coordinator
         coordinator.start()
         window?.makeKeyAndVisible()
-
-        mainCoordinator = coordinator
-
         return true
     }
 }

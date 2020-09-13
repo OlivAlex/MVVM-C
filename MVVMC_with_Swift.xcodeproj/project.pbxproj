@@ -23,11 +23,8 @@
 		E2A6313B1E7D88A6009A7B8B /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A631231E7D88A6009A7B8B /* UsersViewController.swift */; };
 		E2A6313C1E7D88A6009A7B8B /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2A631241E7D88A6009A7B8B /* UsersViewController.xib */; };
 		E2A6313D1E7D88A6009A7B8B /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A631261E7D88A6009A7B8B /* UsersViewModel.swift */; };
-		E2A6313E1E7D88A6009A7B8B /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A631281E7D88A6009A7B8B /* UINavigationControllerExtension.swift */; };
-		E2A6313F1E7D88A6009A7B8B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A631291E7D88A6009A7B8B /* UIViewControllerExtension.swift */; };
-		E2A631401E7D88A6009A7B8B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A6312A1E7D88A6009A7B8B /* UIViewExtension.swift */; };
-		E2A631421E7D88A6009A7B8B /* UIViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A6312F1E7D88A6009A7B8B /* UIViewControllerType.swift */; };
-		E2A631431E7D88A6009A7B8B /* UIViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A631301E7D88A6009A7B8B /* UIViewType.swift */; };
+		E2A6313F1E7D88A6009A7B8B /* UIKit+MVVM-C.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A631291E7D88A6009A7B8B /* UIKit+MVVM-C.swift */; };
+		E2A631421E7D88A6009A7B8B /* UIKit+CustomTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A6312F1E7D88A6009A7B8B /* UIKit+CustomTypes.swift */; };
 		E2A6314C1E7D8963009A7B8B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A6314B1E7D8963009A7B8B /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,11 +58,8 @@
 		E2A631231E7D88A6009A7B8B /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		E2A631241E7D88A6009A7B8B /* UsersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
 		E2A631261E7D88A6009A7B8B /* UsersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
-		E2A631281E7D88A6009A7B8B /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
-		E2A631291E7D88A6009A7B8B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		E2A6312A1E7D88A6009A7B8B /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		E2A6312F1E7D88A6009A7B8B /* UIViewControllerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerType.swift; sourceTree = "<group>"; };
-		E2A631301E7D88A6009A7B8B /* UIViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewType.swift; sourceTree = "<group>"; };
+		E2A631291E7D88A6009A7B8B /* UIKit+MVVM-C.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+MVVM-C.swift"; sourceTree = "<group>"; };
+		E2A6312F1E7D88A6009A7B8B /* UIKit+CustomTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+CustomTypes.swift"; sourceTree = "<group>"; };
 		E2A6314B1E7D8963009A7B8B /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,19 +144,11 @@
 		E2A631121E7D88A6009A7B8B /* Container */ = {
 			isa = PBXGroup;
 			children = (
-				E2A631131E7D88A6009A7B8B /* Coordinator */,
+				E2A631141E7D88A6009A7B8B /* DashboardContainerCoordinator.swift */,
+				E2A631191E7D88A6009A7B8B /* DashboardContainerViewModel.swift */,
 				E2A631151E7D88A6009A7B8B /* View */,
-				E2A631181E7D88A6009A7B8B /* ViewModel */,
 			);
 			path = Container;
-			sourceTree = "<group>";
-		};
-		E2A631131E7D88A6009A7B8B /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				E2A631141E7D88A6009A7B8B /* DashboardContainerCoordinator.swift */,
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		E2A631151E7D88A6009A7B8B /* View */ = {
@@ -172,14 +158,6 @@
 				E2A631171E7D88A6009A7B8B /* DashboardContainerViewController.xib */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		E2A631181E7D88A6009A7B8B /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				E2A631191E7D88A6009A7B8B /* DashboardContainerViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		E2A6311A1E7D88A6009A7B8B /* Widgets */ = {
@@ -193,37 +171,13 @@
 		E2A6311B1E7D88A6009A7B8B /* Users */ = {
 			isa = PBXGroup;
 			children = (
-				E2A6311C1E7D88A6009A7B8B /* Coordinator */,
-				E2A6311E1E7D88A6009A7B8B /* Model */,
-				E2A631201E7D88A6009A7B8B /* Provider */,
+				E2A6311D1E7D88A6009A7B8B /* UsersCoordinator.swift */,
+				E2A6311F1E7D88A6009A7B8B /* UserModel.swift */,
+				E2A631211E7D88A6009A7B8B /* UsersDataProvider.swift */,
+				E2A631261E7D88A6009A7B8B /* UsersViewModel.swift */,
 				E2A631221E7D88A6009A7B8B /* View */,
-				E2A631251E7D88A6009A7B8B /* ViewModel */,
 			);
 			path = Users;
-			sourceTree = "<group>";
-		};
-		E2A6311C1E7D88A6009A7B8B /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				E2A6311D1E7D88A6009A7B8B /* UsersCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		E2A6311E1E7D88A6009A7B8B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				E2A6311F1E7D88A6009A7B8B /* UserModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		E2A631201E7D88A6009A7B8B /* Provider */ = {
-			isa = PBXGroup;
-			children = (
-				E2A631211E7D88A6009A7B8B /* UsersDataProvider.swift */,
-			);
-			path = Provider;
 			sourceTree = "<group>";
 		};
 		E2A631221E7D88A6009A7B8B /* View */ = {
@@ -235,20 +189,10 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		E2A631251E7D88A6009A7B8B /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				E2A631261E7D88A6009A7B8B /* UsersViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		E2A631271E7D88A6009A7B8B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E2A631281E7D88A6009A7B8B /* UINavigationControllerExtension.swift */,
-				E2A631291E7D88A6009A7B8B /* UIViewControllerExtension.swift */,
-				E2A6312A1E7D88A6009A7B8B /* UIViewExtension.swift */,
+				E2A631291E7D88A6009A7B8B /* UIKit+MVVM-C.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,8 +200,7 @@
 		E2A6312D1E7D88A6009A7B8B /* UIKitTypes */ = {
 			isa = PBXGroup;
 			children = (
-				E2A6312F1E7D88A6009A7B8B /* UIViewControllerType.swift */,
-				E2A631301E7D88A6009A7B8B /* UIViewType.swift */,
+				E2A6312F1E7D88A6009A7B8B /* UIKit+CustomTypes.swift */,
 			);
 			path = UIKitTypes;
 			sourceTree = "<group>";
@@ -387,11 +330,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2A631401E7D88A6009A7B8B /* UIViewExtension.swift in Sources */,
 				E2A631331E7D88A6009A7B8B /* Coordinator.swift in Sources */,
-				E2A631431E7D88A6009A7B8B /* UIViewType.swift in Sources */,
 				E2A6313D1E7D88A6009A7B8B /* UsersViewModel.swift in Sources */,
-				E2A6313E1E7D88A6009A7B8B /* UINavigationControllerExtension.swift in Sources */,
 				E2A631341E7D88A6009A7B8B /* DashboardContainerCoordinator.swift in Sources */,
 				E272B1581E7D876A0009A932 /* AppDelegate.swift in Sources */,
 				E2A6313B1E7D88A6009A7B8B /* UsersViewController.swift in Sources */,
@@ -401,10 +341,10 @@
 				E2A631311E7D88A6009A7B8B /* BaseViewController.swift in Sources */,
 				E2A631351E7D88A6009A7B8B /* DashboardContainerViewController.swift in Sources */,
 				E2A631391E7D88A6009A7B8B /* UserModel.swift in Sources */,
-				E2A6313F1E7D88A6009A7B8B /* UIViewControllerExtension.swift in Sources */,
+				E2A6313F1E7D88A6009A7B8B /* UIKit+MVVM-C.swift in Sources */,
 				E2A6314C1E7D8963009A7B8B /* main.swift in Sources */,
 				E2A631381E7D88A6009A7B8B /* UsersCoordinator.swift in Sources */,
-				E2A631421E7D88A6009A7B8B /* UIViewControllerType.swift in Sources */,
+				E2A631421E7D88A6009A7B8B /* UIKit+CustomTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

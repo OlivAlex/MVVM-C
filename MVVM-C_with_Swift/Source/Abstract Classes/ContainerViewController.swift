@@ -14,6 +14,7 @@ class ContainerViewController {
     }
 
     func addChildController(_ childController: UIViewControllerType) {
-        parentViewController.addFillerChildViewController(childController, toView: containerView)
+        parentViewController.addFillerChildViewController(childController,
+														  toView: containerView)
     }
 }

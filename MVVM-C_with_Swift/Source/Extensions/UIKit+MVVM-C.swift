@@ -6,6 +6,8 @@
 
 import UIKit
 
+extension UINavigationController: UINavigationControllerType { }
+
 extension UIViewController: UIViewControllerType {
     
 	var viewType: UIViewType {
@@ -38,3 +40,30 @@ extension UIViewController: UIViewControllerType {
 //        return self.sentMessage(#selector(Base.viewDidLoad)).map { _ in Void() }
 //    }
 //}
+
+extension UIView: UIViewType {
+    func addSubview(_ view: UIViewType) {
+        guard let view = view as? UIView else { return }
+        addSubview(view)
+    }
+    
+    func addFillerSubview(_ subview: UIViewType) {
+        subview.translatesAutoresizingMaskIntoConstraints = false
+
+        addSubview(subview)
+
+        let views = ["subview": subview]
+        let verticalConstraint = NSLayoutConstraint.constraints(
+            withVisualFormat: "V:|[subview]|",
+            options: [],
+            metrics: nil,
+            views: views)
+        let horizontalConstraint = NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|[subview]|",
+            options: [],
+            metrics: nil,
+            views: views)
+
+        addConstraints(verticalConstraint + horizontalConstraint)
+    }
+}

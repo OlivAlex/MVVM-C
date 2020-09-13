@@ -23,18 +23,22 @@ extension DashboardContainerCoordinator {
 	func start() {
         guard let navigationController = navigationController else { return }
         let viewModel = DashboardContainerViewModel()
-        let container = DashboardContainerViewController(viewModel: viewModel)
+		let container = DashboardContainerViewController(viewModel: viewModel,
+														 delegate: self)
 
-		dashboardContainerViewController = container
-        viewModel.shouldLoadWidget = {
-			guard let containerViewController = self.usersContainerViewController() else { return }
-			let coordinator = UsersCoordinator(containerViewController: containerViewController)
-			coordinator.start()
-			
-			self.childCoordinators.append(coordinator)
-		}
-		
         navigationController.pushViewController(container, animated: true)
+		dashboardContainerViewController = container
+        viewModel.shouldLoadWidget = { [weak self] in
+			self?.loadWidgets()
+		}
+    }
+	
+	func loadWidgets() {
+		guard let containerViewController = self.usersContainerViewController() else { return }
+        let coordinator = UsersCoordinator(containerViewController: containerViewController)
+        coordinator.start()
+        
+        childCoordinators.append(coordinator)
     }
 
     private func usersContainerViewController() -> ContainerViewController? {
@@ -43,4 +47,11 @@ extension DashboardContainerCoordinator {
         return ContainerViewController(parentViewController: dashboardContainerViewController,
                                        containerView: dashboardContainerViewController.usersContainerView)
     }
+}
+
+extension DashboardContainerCoordinator : ControllerDelegate {
+	
+	func viewDidLoad() {
+		dashboardContainerViewController?.viewModel.shouldLoadWidget()
+	}
 }
