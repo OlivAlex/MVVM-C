@@ -4,7 +4,6 @@
 //  Copyright © 2017 Marco Santarossa. All rights reserved.
 //
 
-import RxSwift
 import UIKit
 
 final class UsersCoordinator: Coordinator {
@@ -18,7 +17,7 @@ final class UsersCoordinator: Coordinator {
     func start() {
         guard let containerViewController = containerViewController else { return }
 
-        let dataProvider = UsersDataProvider()
+        let dataProvider = DataProvider()
         let viewModel = UsersViewModel(dataProvider: dataProvider)
         let usersViewController = UsersViewController(viewModel: viewModel)
         containerViewController.addChildController(usersViewController)

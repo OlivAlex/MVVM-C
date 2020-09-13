@@ -6,4 +6,4 @@
 
 import UIKit
 
-extension UINavigationController: UINavigationControllerType {}
+extension UINavigationController: UINavigationControllerType { }

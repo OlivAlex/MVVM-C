@@ -4,8 +4,6 @@
 //  Copyright © 2017 Marco Santarossa. All rights reserved.
 //
 
-import RxCocoa
-import RxSwift
 import UIKit
 
 final class UsersViewController: BaseViewController<UsersViewModelType> {

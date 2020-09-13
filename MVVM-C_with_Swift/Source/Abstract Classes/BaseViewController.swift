@@ -4,26 +4,26 @@
 //  Copyright © 2017 Marco Santarossa. All rights reserved.
 //
 
-import RxSwift
 import UIKit
 
 class BaseViewController<T>: UIViewController {
-    
-    let disposeBag = DisposeBag()
-    
-    private(set) var viewModel: T
+
+	private(set) var viewModel: T {
+		didSet {
+			configure()
+		}
+	}
     
     init(viewModel: T) {
-        self.viewModel = viewModel
-        
+		self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-
-        configure(viewModel: viewModel)
+		
+        configure()
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    func configure(viewModel: T) {}
+	
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+	
+    func configure() {}
 }

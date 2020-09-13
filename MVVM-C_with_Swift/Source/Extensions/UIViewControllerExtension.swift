@@ -4,11 +4,11 @@
 //  Copyright © 2017 Marco Santarossa. All rights reserved.
 //
 
-import RxSwift
 import UIKit
 
 extension UIViewController: UIViewControllerType {
-    var viewType: UIViewType {
+    
+	var viewType: UIViewType {
         return self.view
     }
 
@@ -32,9 +32,9 @@ extension UIViewController: UIViewControllerType {
     }
 }
 
-extension Reactive where Base: UIViewController {
-
-    var viewDidLoad: Observable<Void> {
-        return self.sentMessage(#selector(Base.viewDidLoad)).map { _ in Void() }
-    }
-}
+//extension Reactive where Base: UIViewController {
+//
+//    var viewDidLoad: Observable<Void> {
+//        return self.sentMessage(#selector(Base.viewDidLoad)).map { _ in Void() }
+//    }
+//}
