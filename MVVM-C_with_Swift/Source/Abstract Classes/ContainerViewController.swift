@@ -8,7 +8,7 @@ class ContainerViewController {
 	let parentViewController: UIViewControllerType
 	let containerView: UIViewType
 	
-	init(parentViewController: UIViewControllerType, containerView: UIViewType) {
+	init(_ parentViewController: UIViewControllerType, containerView: UIViewType) {
 		self.parentViewController = parentViewController
 		self.containerView = containerView
 	}

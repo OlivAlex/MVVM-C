@@ -16,7 +16,6 @@ final class UsersCoordinator: Coordinator {
 	
 	func start() {
 		guard let containerViewController = containerViewController else { return }
-		
 		let dataProvider = DataProvider()
 		let viewModel = UsersViewModel(dataProvider: dataProvider)
 		let usersViewController = UsersViewController(viewModel: viewModel, delegate: self)
@@ -28,6 +27,6 @@ final class UsersCoordinator: Coordinator {
 extension UsersCoordinator : ControllerDelegate {
 	
 	func viewDidLoad() {
-		print("View Loaded")
+		
 	}
 }
