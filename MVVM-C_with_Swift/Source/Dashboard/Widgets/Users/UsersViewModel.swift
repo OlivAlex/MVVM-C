@@ -12,29 +12,59 @@ protocol UsersViewModelType {
     var usersCountInfo: String { get }
     var userFound: String { get }
 	
-	func controllerRequestedUpdate()
+	func controllerRequestedUpdate(with input: String)
 }
 
 final class UsersViewModel : UsersViewModelType {
 	
-	var shouldShowActivityIndicator: Bool = true
-	var shouldShowUsersSearchView: Bool = true
-	var usersCountInfo: String = "Number"
-	var userFound: String = "Search for a user"
+	// Repeating code here is a small price to pay for avoiding other dependencies onto the codebase.
+	var shouldShowActivityIndicator: Bool = false {
+		didSet {
+			modelListener?.modelChanged()
+		}
+	}
+	var shouldShowUsersSearchView: Bool = true {
+		didSet {
+			modelListener?.modelChanged()
+		}
+	}
+	var usersCountInfo: String = "Enter an ID" {
+		didSet {
+			modelListener?.modelChanged()
+		}
+	}
+	var userFound: String = "Search for a user" {
+		didSet {
+			modelListener?.modelChanged()
+		}
+	}
 	
+	var modelListener: ModelListener?
 	let dataProvider: UsersDataProviderType!
 	init(dataProvider: UsersDataProviderType) {
 		self.dataProvider = dataProvider
-		controllerRequestedUpdate()
 	}
 	
-	func controllerRequestedUpdate() {
-		dataProvider.fetchUsers(from: "http://jsonplaceholder.typicode.com/users") { fetchUsersData in
+	func controllerRequestedUpdate(with input: String) {
+		
+		shouldShowActivityIndicator = true
+		
+		dataProvider.fetchUsers(from: "https://jsonplaceholder.typicode.com/users/\(input)") { fetchUsersData in
 			guard case .success(let usersData) = fetchUsersData else {
 				return
 			}
 			
+			let decoder = JSONDecoder()
+			guard let newModel = try? decoder.decode(UserModel.self, from: usersData) else {
+				self.shouldShowActivityIndicator = false
+				self.usersCountInfo = "Not Found"
+				self.userFound = ""
+				return
+			}
 			
+			self.userFound = newModel.name
+			self.usersCountInfo = newModel.username
+			self.shouldShowActivityIndicator = false
 		}
 	}
 }

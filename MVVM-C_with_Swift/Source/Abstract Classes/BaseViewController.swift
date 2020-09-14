@@ -40,6 +40,8 @@ class BaseViewController<T>: UIViewController {
 
 extension BaseViewController : ModelListener {
 	func modelChanged() {
-		configure()
+		DispatchQueue.main.async {
+			self.configure()
+		}
 	}
 }

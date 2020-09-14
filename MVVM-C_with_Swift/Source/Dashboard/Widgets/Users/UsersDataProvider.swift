@@ -37,20 +37,6 @@ final class DataProvider: UsersDataProviderType {
 			}
 			
 			completion(.success(data))
-		}
+		}.resume()
 	}
-    
-//    private func parseResponse(data: Any) -> Observable<[UserModel]> {
-//        guard let json = data as? [[String: Any]],
-//            let users = self.parseUsers(from: json) else {
-//            let error = NSError(domain: "ParsingError", code: 0, userInfo: nil)
-//            return Observable.error(error)
-//        }
-//
-//        return Observable.just(users)
-//    }
-//
-//    private func parseUsers(from json: [[String: Any]]) -> [UserModel]? {
-//        return Mapper<UserModel>().mapArray(JSONArray: json)
-//    }
 }

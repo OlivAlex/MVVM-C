@@ -30,7 +30,7 @@ final class UsersViewController: BaseViewController<UsersViewModelType> {
 	}
 
 	@objc func stopEditing() {
-		viewModel.controllerRequestedUpdate()
+		viewModel.controllerRequestedUpdate(with: searchUserTextField.text ?? "")
 		self.view.endEditing(true)
 	}
 }

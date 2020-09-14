@@ -20,6 +20,7 @@ final class UsersCoordinator: Coordinator {
         let dataProvider = DataProvider()
         let viewModel = UsersViewModel(dataProvider: dataProvider)
 		let usersViewController = UsersViewController(viewModel: viewModel, delegate: self)
+		viewModel.modelListener = usersViewController
         containerViewController.addChildController(usersViewController)
     }
 }
