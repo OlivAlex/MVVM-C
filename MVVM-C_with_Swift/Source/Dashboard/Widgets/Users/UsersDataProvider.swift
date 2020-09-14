@@ -17,7 +17,7 @@ protocol UsersDataProviderType {
 }
 
 final class DataProvider: UsersDataProviderType {
-    
+	
 	func fetchUsers(from rawEndpoint: String, completion: @escaping ((Result<Data, FetchError>) -> Void)) {
 		guard let endpointURL = URL(string: rawEndpoint) else {
 			completion(.failure(.invalidURL))

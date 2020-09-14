@@ -7,11 +7,11 @@
 import Foundation
 
 protocol DashboardContainerViewModelType: class {
-    var title: String { get }
-    var shouldLoadWidget: () -> Void { get }
+	var title: String { get }
+	var shouldLoadWidget: () -> Void { get }
 }
 
 final class DashboardContainerViewModel: DashboardContainerViewModelType {
-    var title: String = "Dashboard"
+	var title: String = "Dashboard"
 	var shouldLoadWidget: () -> Void = { }
 }

@@ -5,16 +5,16 @@
 //
 
 class ContainerViewController {
-    let parentViewController: UIViewControllerType
-    let containerView: UIViewType
-
-    init(parentViewController: UIViewControllerType, containerView: UIViewType) {
-        self.parentViewController = parentViewController
-        self.containerView = containerView
-    }
-
-    func addChildController(_ childController: UIViewControllerType) {
-        parentViewController.addFillerChildViewController(childController,
+	let parentViewController: UIViewControllerType
+	let containerView: UIViewType
+	
+	init(parentViewController: UIViewControllerType, containerView: UIViewType) {
+		self.parentViewController = parentViewController
+		self.containerView = containerView
+	}
+	
+	func addChildController(_ childController: UIViewControllerType) {
+		parentViewController.addFillerChildViewController(childController,
 														  toView: containerView)
-    }
+	}
 }

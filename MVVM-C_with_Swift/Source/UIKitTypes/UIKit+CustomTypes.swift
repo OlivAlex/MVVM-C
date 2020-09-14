@@ -7,18 +7,17 @@
 import UIKit
 
 protocol UIViewControllerType: class {
-    var viewType: UIViewType { get }
-
-    func addFillerChildViewController(_ childController: UIViewControllerType, toView: UIViewType?)
-    func addChildViewController(_ childController: UIViewControllerType)
-    func didMove(toParentViewController parent: UIViewControllerType?)
-    func removeFromParentViewController()
+	var viewType: UIViewType { get }
+	
+	func addFillerChildViewController(_ childController: UIViewControllerType, toView: UIViewType?)
+	func addChildViewController(_ childController: UIViewControllerType)
+	func didMove(toParentViewController parent: UIViewControllerType?)
+	func removeFromParentViewController()
 }
 
 protocol UIViewType: class {
-    // swiftlint:disable variable_name
-    var translatesAutoresizingMaskIntoConstraints: Bool { get set }
-
-    func addSubview(_ view: UIViewType)
-    func addFillerSubview(_ subview: UIViewType)
+	var translatesAutoresizingMaskIntoConstraints: Bool { get set }
+	
+	func addSubview(_ view: UIViewType)
+	func addFillerSubview(_ subview: UIViewType)
 }

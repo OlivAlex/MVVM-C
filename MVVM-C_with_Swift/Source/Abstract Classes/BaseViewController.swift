@@ -15,7 +15,7 @@ protocol ModelListener {
 }
 
 class BaseViewController<T>: UIViewController {
-
+	
 	private(set) var viewModel: T
 	private(set) var delegate: ControllerDelegate
 	
@@ -23,9 +23,9 @@ class BaseViewController<T>: UIViewController {
 		self.viewModel = viewModel
 		self.delegate = delegate
 		
-        super.init(nibName: nil, bundle: nil)
-        configure()
-    }
+		super.init(nibName: nil, bundle: nil)
+		configure()
+	}
 	
 	override func viewDidLoad() {
 		delegate.viewDidLoad()
@@ -35,7 +35,7 @@ class BaseViewController<T>: UIViewController {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
-    func configure() {}
+	func configure() {}
 }
 
 extension BaseViewController : ModelListener {

@@ -8,9 +8,9 @@ import UIKit
 
 final class DashboardContainerViewController: BaseViewController<DashboardContainerViewModelType> {
 	
-    @IBOutlet private(set) weak var usersContainerView: UIView!
+	@IBOutlet private(set) weak var usersContainerView: UIView!
 	
-    override func configure() {
+	override func configure() {
 		title = viewModel.title
-    }
+	}
 }

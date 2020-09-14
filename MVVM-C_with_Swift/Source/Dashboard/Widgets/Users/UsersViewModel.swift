@@ -7,10 +7,10 @@
 import Foundation
 
 protocol UsersViewModelType {
-    var shouldShowActivityIndicator: Bool { get }
-    var shouldShowUsersSearchView: Bool { get }
-    var usersCountInfo: String { get }
-    var userFound: String { get }
+	var shouldShowActivityIndicator: Bool { get }
+	var shouldShowUsersSearchView: Bool { get }
+	var usersCountInfo: String { get }
+	var userFound: String { get }
 	
 	func controllerRequestedUpdate(with input: String)
 }

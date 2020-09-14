@@ -12,7 +12,7 @@
 		E272B1621E7D876A0009A932 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E272B1601E7D876A0009A932 /* LaunchScreen.storyboard */; };
 		E2A631311E7D88A6009A7B8B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A6310E1E7D88A6009A7B8B /* BaseViewController.swift */; };
 		E2A631321E7D88A6009A7B8B /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A6310F1E7D88A6009A7B8B /* ContainerViewController.swift */; };
-		E2A631331E7D88A6009A7B8B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A631101E7D88A6009A7B8B /* Coordinator.swift */; };
+		E2A631331E7D88A6009A7B8B /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A631101E7D88A6009A7B8B /* Helpers.swift */; };
 		E2A631341E7D88A6009A7B8B /* DashboardContainerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A631141E7D88A6009A7B8B /* DashboardContainerCoordinator.swift */; };
 		E2A631351E7D88A6009A7B8B /* DashboardContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A631161E7D88A6009A7B8B /* DashboardContainerViewController.swift */; };
 		E2A631361E7D88A6009A7B8B /* DashboardContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2A631171E7D88A6009A7B8B /* DashboardContainerViewController.xib */; };
@@ -47,7 +47,7 @@
 		E272B1681E7D876A0009A932 /* MVVMC_with_SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMC_with_SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A6310E1E7D88A6009A7B8B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E2A6310F1E7D88A6009A7B8B /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		E2A631101E7D88A6009A7B8B /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E2A631101E7D88A6009A7B8B /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		E2A631141E7D88A6009A7B8B /* DashboardContainerCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardContainerCoordinator.swift; sourceTree = "<group>"; };
 		E2A631161E7D88A6009A7B8B /* DashboardContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardContainerViewController.swift; sourceTree = "<group>"; };
 		E2A631171E7D88A6009A7B8B /* DashboardContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardContainerViewController.xib; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 			children = (
 				E2A6310E1E7D88A6009A7B8B /* BaseViewController.swift */,
 				E2A6310F1E7D88A6009A7B8B /* ContainerViewController.swift */,
-				E2A631101E7D88A6009A7B8B /* Coordinator.swift */,
+				E2A631101E7D88A6009A7B8B /* Helpers.swift */,
 			);
 			path = "Abstract Classes";
 			sourceTree = "<group>";
@@ -330,7 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2A631331E7D88A6009A7B8B /* Coordinator.swift in Sources */,
+				E2A631331E7D88A6009A7B8B /* Helpers.swift in Sources */,
 				E2A6313D1E7D88A6009A7B8B /* UsersViewModel.swift in Sources */,
 				E2A631341E7D88A6009A7B8B /* DashboardContainerCoordinator.swift in Sources */,
 				E272B1581E7D876A0009A932 /* AppDelegate.swift in Sources */,

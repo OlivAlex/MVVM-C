@@ -7,7 +7,7 @@
 import Foundation
 
 struct UserModel: Decodable {
-    private(set) var id: Int
-    private(set) var name: String
-    private(set) var username: String
+	private(set) var id: Int
+	private(set) var name: String
+	private(set) var username: String
 }

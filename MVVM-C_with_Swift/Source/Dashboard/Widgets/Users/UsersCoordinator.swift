@@ -7,22 +7,22 @@
 import UIKit
 
 final class UsersCoordinator: Coordinator {
-
-    private weak var containerViewController: ContainerViewController?
-
-    init(containerViewController: ContainerViewController) {
-        self.containerViewController = containerViewController
-    }
-    
-    func start() {
-        guard let containerViewController = containerViewController else { return }
-
-        let dataProvider = DataProvider()
-        let viewModel = UsersViewModel(dataProvider: dataProvider)
+	
+	private weak var containerViewController: ContainerViewController?
+	
+	init(containerViewController: ContainerViewController) {
+		self.containerViewController = containerViewController
+	}
+	
+	func start() {
+		guard let containerViewController = containerViewController else { return }
+		
+		let dataProvider = DataProvider()
+		let viewModel = UsersViewModel(dataProvider: dataProvider)
 		let usersViewController = UsersViewController(viewModel: viewModel, delegate: self)
 		viewModel.modelListener = usersViewController
-        containerViewController.addChildController(usersViewController)
-    }
+		containerViewController.addChildController(usersViewController)
+	}
 }
 
 extension UsersCoordinator : ControllerDelegate {
